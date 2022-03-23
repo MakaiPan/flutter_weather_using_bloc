@@ -42,8 +42,9 @@ class HomePage extends StatelessWidget {
     return Center(
       child: CityInputBody(
         onSubmitted: (inputValue) {
+          String city = inputValue.trim();
           final weatherCubit = context.read<WeatherCubit>();
-          weatherCubit.getWeather(inputValue);
+          weatherCubit.getWeather(city);
         },
       ),
     );

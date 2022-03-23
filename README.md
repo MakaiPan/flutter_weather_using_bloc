@@ -3,6 +3,7 @@
 A weather app develops with Flutter and implements the BLoC design pattern to help state management.  
 
 ## TODO
+- [ ] Search advise
 - [ ] Widget test
 - [ ] Integration test
 - [ ] Current location weather

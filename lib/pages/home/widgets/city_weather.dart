@@ -27,7 +27,7 @@ class CityWeather extends StatelessWidget {
             children: [
               Text(
                 weather.cityName,
-                style: Theme.of(context).textTheme.headline1,
+                style: Theme.of(context).textTheme.headline4,
               ),
               Text(
                 weather.mainWeather,
