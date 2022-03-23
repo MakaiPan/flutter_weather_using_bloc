@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_weather_using_bloc/model/weather.dart';
+import 'package:flutter_weather_using_bloc/features/weather/model/weather.dart';
 import 'package:flutter_weather_using_bloc/services/network_helper.dart';
 
 void main() {
@@ -13,7 +13,7 @@ void main() {
   test(
     'Weather class testing should fetch data from openWeatherAPI.',
     () async {
-      NetworkHelper networkHelper = const NetworkHelper(url: url);
+      NetworkHelper networkHelper = NetworkHelper(url: Uri.parse(url));
 
       var weatherData = await networkHelper.getJsonData();
       Weather weather = Weather.fromMap(weatherData);

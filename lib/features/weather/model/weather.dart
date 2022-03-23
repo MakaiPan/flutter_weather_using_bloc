@@ -1,3 +1,13 @@
+class Coordinate {
+  double latitude;
+  double longitude;
+
+  Coordinate({
+    required this.latitude,
+    required this.longitude,
+  });
+}
+
 class Weather {
   final String cityName;
   final double temperatureCelsius;
