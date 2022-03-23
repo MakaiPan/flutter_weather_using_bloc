@@ -2,8 +2,15 @@
 
 A weather app develops with Flutter and uses bloc state management.
 
-7d681a760a81ba5b863c0cca27585d6d
-https://api.openweathermap.org/data/2.5/weather?lat=24.976546&lon=121.408606&appid=7d681a760a81ba5b863c0cca27585d6d
+## Packages
+| **Packages**                          | **Description**         |
+|---------------------------------------|-------------------------|
+| [http](https://pub.dev/packages/http) | Fetch data from network |
+| [test](https://pub.dev/packages/test) | Testing                 |
+| [bloc](https://bloclibrary.dev/)      | State management        |
 
-lat: 24.976546
-lon: 121.408606
+
+## APIs
+| **API**                                   | **Description**     |
+|-------------------------------------------|---------------------|
+| [OpenWeather](https://openweathermap.org) | Weather data source |
