@@ -3,12 +3,14 @@ class Weather {
   final double temperatureCelsius;
   final String mainWeather;
   final String weatherDescription;
+  final int statusCode;
 
   const Weather({
     required this.cityName,
     required this.temperatureCelsius,
     required this.mainWeather,
     required this.weatherDescription,
+    required this.statusCode,
   });
 
   @override
@@ -17,10 +19,23 @@ class Weather {
       other is Weather &&
           runtimeType == other.runtimeType &&
           cityName == other.cityName &&
-          temperatureCelsius == other.temperatureCelsius;
+          temperatureCelsius == other.temperatureCelsius &&
+          mainWeather == other.mainWeather &&
+          weatherDescription == other.weatherDescription &&
+          statusCode == other.statusCode;
 
   @override
-  int get hashCode => cityName.hashCode ^ temperatureCelsius.hashCode;
+  int get hashCode =>
+      cityName.hashCode ^
+      temperatureCelsius.hashCode ^
+      mainWeather.hashCode ^
+      weatherDescription.hashCode ^
+      statusCode.hashCode;
+
+  @override
+  String toString() {
+    return 'Weather{cityName: $cityName, temperatureCelsius: $temperatureCelsius, mainWeather: $mainWeather, weatherDescription: $weatherDescription, statusCode: $statusCode}';
+  }
 
   Map<String, dynamic> toMap() {
     return {
@@ -28,15 +43,17 @@ class Weather {
       'temperatureCelsius': temperatureCelsius,
       'mainWeather': mainWeather,
       'weatherDescription': weatherDescription,
+      'statusCode': statusCode,
     };
   }
 
   factory Weather.fromMap(Map<String, dynamic> map) {
     return Weather(
-      cityName: map['cityName'] as String,
-      temperatureCelsius: map['temperatureCelsius'] as double,
-      mainWeather: map['mainWeather'] as String,
-      weatherDescription: map['weatherDescription'] as String,
+      cityName: map['name'] as String,
+      temperatureCelsius: map['main']['temp'] as double,
+      mainWeather: map['weather'][0]['main'] as String,
+      weatherDescription: map['weather'][0]['description'] as String,
+      statusCode: map['cod'] as int,
     );
   }
 }
