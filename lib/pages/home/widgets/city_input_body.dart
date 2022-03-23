@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_weather_using_bloc/utilities/contants.dart';
+import 'package:flutter_weather_using_bloc/utils/constants.dart';
 
 class CityInputBody extends StatelessWidget {
   const CityInputBody({

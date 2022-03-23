@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_weather_using_bloc/features/weather/model/weather.dart';
+import 'package:flutter_weather_using_bloc/models/weather.dart';
+import 'package:flutter_weather_using_bloc/applications/cubit/weather_cubit.dart';
 
-import '../../applications/weather_cubit.dart';
 import 'widgets/city_input_body.dart';
 import 'widgets/city_weather.dart';
 

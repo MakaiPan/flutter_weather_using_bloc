@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_weather_using_bloc/applications/weather_cubit.dart';
+import 'package:flutter_weather_using_bloc/applications/cubit/weather_cubit.dart';
 
-import '../../../features/weather/model/weather.dart';
+import 'package:flutter_weather_using_bloc/models/weather.dart';
 
 class CityWeather extends StatelessWidget {
   const CityWeather({

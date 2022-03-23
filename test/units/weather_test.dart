@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_weather_using_bloc/features/weather/model/weather.dart';
-import 'package:flutter_weather_using_bloc/services/network_helper.dart';
+import 'package:flutter_weather_using_bloc/models/weather.dart';
+import 'package:flutter_weather_using_bloc/utils//network_helper.dart';
 
 void main() {
   const latOfTaipei = '24.976546';
@@ -13,10 +13,12 @@ void main() {
   test(
     'Weather class testing should fetch data from openWeatherAPI.',
     () async {
-      NetworkHelper networkHelper = NetworkHelper(url: Uri.parse(url));
+      WeatherApiAdapter networkHelper = WeatherApiAdapter.withUrl(url);
 
       var weatherData = await networkHelper.getJsonData();
       Weather weather = Weather.fromMap(weatherData);
+      // ignore: avoid_print
+      print(weather.toString());
       expect(weather.statusCode, 200);
     },
   );

@@ -1,6 +1,12 @@
 # flutter_weather_using_bloc
 
-A weather app develops with Flutter and uses bloc state management.
+A weather app develops with Flutter and implements the BLoC design pattern to help state management.  
+
+## TODO
+- [ ] Widget test
+- [ ] Integration test
+- [ ] Current location weather
+- [ ] Picture about location and weather states
 
 ## Packages
 | **Packages**                          | **Description**         |
@@ -14,3 +20,24 @@ A weather app develops with Flutter and uses bloc state management.
 | **API**                                   | **Description**     |
 |-------------------------------------------|---------------------|
 | [OpenWeather](https://openweathermap.org) | Weather data source |
+
+##Directory Structure
+
+The project directory structure is as follows:
+```
+|--lib
+    |--applications
+        |--cubit
+    |--models
+    |--pages
+        |--home
+            |--widgets
+    |--utils
+```
+
+| **Directory** | **Description**                                     |
+|---------------|-----------------------------------------------------|
+| applications  | Application layer, e.g. cubit                       |
+| models        | Models layer                                        |
+| pages         | View layer                                          |
+| utils         | Some utilities, e.g. NetworkHelper, constants, etc. |

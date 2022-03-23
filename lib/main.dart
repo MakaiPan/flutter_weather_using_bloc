@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_weather_using_bloc/applications/weather_cubit.dart';
-import 'package:flutter_weather_using_bloc/features/weather/weather_repository.dart';
+import 'package:flutter_weather_using_bloc/applications/cubit/weather_cubit.dart';
 
 import 'pages/home/home_page.dart';
 
@@ -21,7 +20,7 @@ class MyApp extends StatelessWidget {
       ),
       home: BlocProvider(
         create: (context) => WeatherCubit(),
-        child: HomePage(),
+        child: const HomePage(),
       ),
     );
   }
