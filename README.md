@@ -2,15 +2,8 @@
 
 A weather app develops with Flutter and uses bloc state management.
 
-## Getting Started
+7d681a760a81ba5b863c0cca27585d6d
+https://api.openweathermap.org/data/2.5/weather?lat=24.976546&lon=121.408606&appid=7d681a760a81ba5b863c0cca27585d6d
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+lat: 24.976546
+lon: 121.408606
