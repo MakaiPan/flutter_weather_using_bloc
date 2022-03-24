@@ -18,8 +18,7 @@ void main() {
         weatherDescription: weatherDescription,
         statusCode: 200,
       );
-      await tester.pumpWidget(
-          MaterialApp(home: Scaffold(body: CityWeather(weather: weather))));
+      await tester.pumpWidget(MaterialApp(home: CityWeather(weather: weather)));
       final cityNameFinder = find.text(nane);
       final tempFinder = find.text('$temp °C');
       final mainWeatherFinder = find.text(mainWeather);

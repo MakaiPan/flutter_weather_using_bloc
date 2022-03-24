@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_weather_using_bloc/utils/constants.dart';
 
-class CityInputBody extends StatelessWidget {
-  const CityInputBody({
+class CityInput extends StatelessWidget {
+  const CityInput({
     Key? key,
     required this.onSubmitted,
   }) : super(key: key);

@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_weather_using_bloc/models/weather.dart';
 import 'package:flutter_weather_using_bloc/applications/cubit/weather_cubit.dart';
 
-import 'widgets/city_input_body.dart';
+import 'widgets/city_input.dart';
 import 'widgets/city_weather.dart';
 
 class HomePage extends StatelessWidget {
@@ -40,7 +40,7 @@ class HomePage extends StatelessWidget {
 
   Widget buildInitial(BuildContext context) {
     return Center(
-      child: CityInputBody(
+      child: CityInput(
         onSubmitted: (inputValue) {
           String city = inputValue.trim();
           final weatherCubit = context.read<WeatherCubit>();

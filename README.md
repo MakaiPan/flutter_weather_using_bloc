@@ -2,10 +2,16 @@
 
 A weather app develops with Flutter and implements the BLoC design pattern to help state management.  
 
+## Features
+
+- Search
+- Cubit (BLoC)
+- Unit Test
+- Widget Test
+- Fetch data from Network
+
 ## TODO
-- [ ] Search advise
-- [ ] Widget test
-- [ ] Integration test
+- [x] Widget test
 - [ ] Current location weather
 - [ ] Picture about location and weather states
 
@@ -22,23 +28,51 @@ A weather app develops with Flutter and implements the BLoC design pattern to he
 |-------------------------------------------|---------------------|
 | [OpenWeather](https://openweathermap.org) | Weather data source |
 
-##Directory Structure
+## Directory Structure
 
 The project directory structure is as follows:
 ```
-|--lib
-    |--applications
-        |--cubit
-    |--models
-    |--pages
-        |--home
-            |--widgets
-    |--utils
+lib/
+|--applications/
+|--models/
+|--pages/
+|--utils/
 ```
 
-| **Directory** | **Description**                                     |
-|---------------|-----------------------------------------------------|
-| applications  | Application layer, e.g. cubit                       |
-| models        | Models layer                                        |
-| pages         | View layer                                          |
-| utils         | Some utilities, e.g. NetworkHelper, constants, etc. |
+| **Directory** | **Description**                                                        |
+|---------------|------------------------------------------------------------------------|
+| applications  | Application layer, e.g. cubit                                          |
+| models        | Models layer directory                                                 |
+| pages         | View layer directory                                                   |
+| utils         | Utility/common functions or properties, e.g. services, constants, etc. |
+
+### applications
+```
+applications/
+|--cubit
+    |--weather_cubit.dart
+    |--weather_state.dart
+```  
+
+### models
+```
+models/
+|--weather.dart
+```  
+
+### pages
+```
+pages/
+|--home
+    |--widgets
+        |--city_input_body.dart
+        |--city_weather.dart
+    |--home_page.dart
+```  
+
+### utils
+```
+utils/
+|--constants.dart
+|--services.dart
+```
