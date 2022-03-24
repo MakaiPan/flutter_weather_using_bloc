@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_weather_using_bloc/models/weather.dart';
-import 'package:flutter_weather_using_bloc/utils//network_helper.dart';
+import 'package:flutter_weather_using_bloc/utils/services.dart';
 
 void main() {
   const latOfTaipei = '24.976546';

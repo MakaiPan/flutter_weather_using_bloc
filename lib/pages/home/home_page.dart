@@ -29,7 +29,7 @@ class HomePage extends StatelessWidget {
           } else if (state is WeatherLoading) {
             return buildLoading();
           } else if (state is WeatherLoaded) {
-            return buildWeatherData(state.weather);
+            return buildWeatherData(context, state.weather);
           } else {
             return buildInitial(context);
           }
@@ -51,7 +51,27 @@ class HomePage extends StatelessWidget {
   }
 
   Widget buildLoading() => const Center(child: CircularProgressIndicator());
-  Widget buildWeatherData(Weather weather) {
-    return CityWeather(weather: weather);
+  Widget buildWeatherData(BuildContext context, Weather weather) {
+    return Column(
+      mainAxisSize: MainAxisSize.max,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        backButton(context),
+        const SizedBox(height: 120.0),
+        CityWeather(weather: weather),
+      ],
+    );
+  }
+
+  IconButton backButton(BuildContext context) {
+    return IconButton(
+      icon: const Icon(
+        Icons.chevron_left,
+        size: 32.0,
+      ),
+      onPressed: () {
+        context.read<WeatherCubit>().init();
+      },
+    );
   }
 }
